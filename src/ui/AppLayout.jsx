@@ -5,7 +5,7 @@ import CartOverview from "../features/cart/CartOverview";
 
 const AppLayout = () => {
   return (
-    <div className="h-screen grid grid-rows-[autp_1fr_auto] ">
+    <div className="h-screen grid grid-rows-[auto_1fr_auto] ">
       <Header />
       <div>
         <main className="mx-auto max-w-3xl">
