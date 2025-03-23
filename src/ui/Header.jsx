@@ -5,7 +5,7 @@ import Username from "../features/user/Username";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center border-b  border-stone-200 bg-yellow-400 sm:px-6 py-3 px-4">
+    <header className="flex justify-between items-center border-b  border-stone-200 bg-yellow-400 sm:px-6 py-3 px-4 text-stone-800">
       <Link to="/" className="tracking-widest font-bold ">
         fastFood
       </Link>
