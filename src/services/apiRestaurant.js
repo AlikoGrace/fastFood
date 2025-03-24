@@ -14,10 +14,12 @@ export async function getMenu() {
     throw new Error("Unexpected data structure, 'results' is not an array.");
   }
 
-  const foodItems = data.resulsts.map((item) => ({
+  const foodItems = data.results.map((item) => ({
     name: item.title,
     imageUrl: item.image,
-    ingredients: item.usedIngredients.map((ingredient) => ingredient.name),
+    ingredients: item.usedIngredients
+      ? item.usedIngredients.map((i) => i.name)
+      : [],
   }));
 
   return foodItems;

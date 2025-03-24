@@ -2,9 +2,9 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
-import Menu from "./features/menu/menu";
 import Error from "./ui/Error";
 import Cart from "./features/cart/Cart";
+import Menu, { loader as menuLoader } from "./features/menu/Menu";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +16,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+
       {
         path: "/menu",
         element: <Menu />,
+        loader: menuLoader,
       },
       {
         path: "/cart",
@@ -29,6 +31,7 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
+  console.log("App Rendering");
   return <RouterProvider router={router} />;
 };
 
